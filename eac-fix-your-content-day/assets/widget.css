@@ -1,0 +1,211 @@
+@font-face {
+  font-family: Bungee;
+  src: url("fonts/Bungee-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #42105e;
+  background: transparent;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+
+.widget {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  container-type: inline-size;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.artwork-header {
+  position: relative;
+  aspect-ratio: 1774 / 498;
+  overflow: hidden;
+  background: #fcfafc;
+}
+
+.header-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.mobile-date { display: none; }
+
+.countdown-panel {
+  position: relative;
+  isolation: isolate;
+  aspect-ratio: 1774 / 389;
+  background: #4d126b url("eac-fycd-artwork.png") center bottom / 100% auto no-repeat;
+}
+
+/* Keep the original brushwork and gold accents. The original example cards and
+   heading are completely covered by their live, semantic HTML replacements. */
+.heading-row {
+  position: absolute;
+  top: 6.5%;
+  left: 17.5%;
+  width: 65%;
+  min-height: 12.5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.2cqw;
+  background: #471064;
+}
+
+.heading-row::before, .heading-row::after {
+  content: "";
+  flex: 1;
+  height: .26cqw;
+  background: #ffb400;
+}
+
+h2 {
+  margin: 0;
+  color: #fff;
+  font: 400 1.95cqw / 1.3 Bungee, Impact, sans-serif;
+  letter-spacing: .57cqw;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.countdown {
+  position: absolute;
+  top: 21.25%;
+  left: 8.25%;
+  width: 84.4%;
+  height: 61.45%;
+  display: grid;
+  grid-template-columns: 360fr 368fr 368fr 348fr;
+  column-gap: 1.05cqw;
+}
+
+.count-card, .card-face {
+  clip-path: polygon(5.8% 0, 94.2% 0, 100% 8.5%, 100% 91.5%, 94.2% 100%, 5.8% 100%, 0 91.5%, 0 8.5%);
+}
+
+.count-card {
+  padding: max(2px, .2cqw);
+  background: #b8a6c4;
+  min-width: 0;
+}
+
+.card-face {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(137deg, transparent 74%, #eeeaf2 74%), linear-gradient(115deg, #fff, #f8f6fa);
+  color: #441064;
+}
+
+.number {
+  display: block;
+  font: 400 9.1cqw / .95 Bungee, Impact, sans-serif;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -.35cqw;
+  transform: scaleX(.92);
+  margin-inline: -.8cqw;
+}
+
+.unit {
+  display: block;
+  margin-top: .4cqw;
+  font: 400 1.8cqw / 1.25 Bungee, Impact, sans-serif;
+  letter-spacing: .08cqw;
+  text-transform: uppercase;
+}
+
+.unit::after {
+  content: "";
+  display: block;
+  width: 5.3cqw;
+  height: .3cqw;
+  margin: .55cqw auto 0;
+  background: #ffb400;
+}
+
+.no-script { margin: 0; padding: 12px 16px; line-height: 1.5; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 700px) {
+  .widget { border-radius: 8px; }
+  .mobile-date {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3px 14px;
+    min-height: 50px;
+    margin: 0;
+    padding: 7px 12px;
+    font-size: 14px;
+    line-height: 1.3;
+    color: #441064;
+    background: #faf8fc;
+  }
+  .mobile-date strong { text-transform: uppercase; }
+  .countdown-panel {
+    aspect-ratio: auto;
+    padding: 20px 20px 24px;
+    background: #4d126b url("panel-brushwork.svg") center / cover no-repeat;
+  }
+  .heading-row {
+    position: static;
+    width: auto;
+    min-height: 0;
+    margin-bottom: 16px;
+    gap: 10px;
+    background: transparent;
+  }
+  .heading-row::before, .heading-row::after { height: 3px; }
+  h2 { font-size: 15px; letter-spacing: 2px; }
+  .countdown {
+    position: static;
+    width: 100%;
+    height: auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .count-card { height: 140px; padding: 2px; }
+  .number { font-size: 76px; letter-spacing: -3px; margin: 0; }
+  .unit { margin-top: 3px; font-size: 16px; letter-spacing: .5px; }
+  .unit::after { width: 54px; height: 3px; margin-top: 7px; }
+}
+
+@media (max-width: 380px) {
+  .countdown-panel { padding-inline: 14px; }
+  .heading-row::before, .heading-row::after { display: none; }
+  h2 { font-size: 14px; letter-spacing: 1.8px; }
+  .number { font-size: 66px; }
+  .unit { font-size: 14px; }
+}
+
+@media (forced-colors: active) {
+  .count-card { background: CanvasText; }
+  .card-face, .heading-row { background: Canvas; color: CanvasText; }
+  h2 { color: CanvasText; }
+  .unit::after { background: CanvasText; }
+}

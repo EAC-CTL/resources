@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Embed the EAC Fix Your Content Day countdown</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #f6f4f8; color: #222; font: 17px/1.5 Arial, Helvetica, sans-serif; }
+    main { max-width: 960px; margin: 0 auto; padding: 40px 24px 56px; }
+    h1 { margin: 0 0 12px; color: #510c76; font-size: clamp(26px, 4vw, 36px); line-height: 1.2; }
+    h2 { color: #510c76; margin: 0 0 12px; font-size: 24px; }
+    section { margin-top: 28px; padding: 24px; background: white; border: 1px solid #dfd8e5; border-top: 4px solid #fea400; border-radius: 8px; }
+    p { margin: 12px 0; }
+    label { display: block; margin: 16px 0 8px; font-weight: bold; }
+    textarea { display: block; width: 100%; padding: 14px; border: 1px solid #79717f; border-radius: 4px; background: #faf9fb; color: #222; font: 14px/1.5 Consolas, monospace; resize: vertical; }
+    textarea:focus { outline: 3px solid #510c76; outline-offset: 3px; }
+    code { overflow-wrap: anywhere; }
+    a { color: #510c76; text-underline-offset: .2em; }
+    a:focus-visible { outline: 3px solid #510c76; outline-offset: 3px; }
+    .note { color: #45404a; }
+    @media (max-width: 480px) { main { padding: 24px 16px; } section { padding: 18px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Embed the countdown</h1>
+    <p>Publish the widget to GitHub Pages first. Then replace <code>https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/</code> in the chosen snippet with the HTTPS address from your repository's Pages settings.</p>
+    <p class="note">Target: November 10, 2026 at 12:00 a.m. Arizona time (UTC−7), the beginning of November 10.</p>
+
+    <section aria-labelledby="canvas-heading">
+      <h2 id="canvas-heading">Canvas Page</h2>
+      <p>Edit the Canvas Page, open the Rich Content Editor's HTML editor, paste this iframe, and save. Select the code below and copy it.</p>
+      <label for="canvas-code">Canvas iframe snippet</label>
+      <textarea id="canvas-code" readonly rows="11" spellcheck="false">&lt;iframe
+  src="https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/"
+  title="EAC Fix Your Content Day countdown to November 10, 2026"
+  width="100%"
+  height="640"
+  style="display:block;width:100%;max-width:1200px;border:0;"
+  loading="lazy"&gt;
+&lt;/iframe&gt;</textarea>
+    </section>
+
+    <section aria-labelledby="sharepoint-heading">
+      <h2 id="sharepoint-heading">SharePoint Embed web part</h2>
+      <p>Edit the SharePoint page, add an Embed web part, and paste this into <strong>Website address or embed code</strong>. Then republish.</p>
+      <label for="sharepoint-code">SharePoint iframe snippet</label>
+      <textarea id="sharepoint-code" readonly rows="6" spellcheck="false">&lt;iframe src="https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/" title="EAC Fix Your Content Day countdown to November 10, 2026" width="100%" height="640" frameborder="0"&gt;&lt;/iframe&gt;</textarea>
+      <p class="note">If embedding is blocked, your site collection administrator may need to add your exact Pages hostname, such as <code>YOUR-USERNAME.github.io</code>, to the site's HTML Field Security allow-list.</p>
+    </section>
+
+    <p class="note">The widget adapts to the iframe's width, up to 1200 pixels. Its four cards reflow into two rows at 700 pixels wide and below. The recommended 640-pixel iframe height provides room for the mobile reflow; adjust <code>height</code> if the destination page needs more or less vertical room. Leave scrolling available for narrow layouts or browser zoom. Verify the saved pages on desktop and phone.</p>
+    <p><a href="README.md">Publishing instructions and official platform references</a></p>
+  </main>
+</body>
+</html>

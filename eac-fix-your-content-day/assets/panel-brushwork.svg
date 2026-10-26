@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480" preserveAspectRatio="xMidYMid slice">
+  <!-- Code-drawn decorative brushwork for the reflowed mobile panel. -->
+  <path fill="#4d126b" d="M0 0h800v480H0z"/>
+  <g fill="#743098" opacity=".45">
+    <path d="M-80 118 218-30H94L-80 63zm0 66L290-20 148 26-80 146zm0 41L145 83 67 149-80 246zM560 480l320-200v80L688 480zm-147 0 447-244-90 84-228 160zM-80 450 150 272 57 384-25 480z"/>
+  </g>
+  <g fill="#ffb20b">
+    <path d="M-32 303 137 181 80 242 18 277 73 250-32 336zm0 62L116 238 76 287 26 321 70 298-102 432zM672 480l176-132-53 55-55 33 47-21-65 65zM731 480l128-85-38 36-48 49z"/>
+  </g>
+  <g stroke="#9959b4" stroke-width="2" opacity=".22">
+    <path d="m0 112 154-95M4 134l191-120M0 169l119-81m511 386 165-103M592 477l197-123M37 471l100-64M0 442l76-46"/>
+  </g>
+</svg>
